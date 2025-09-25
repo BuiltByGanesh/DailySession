@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: HTML Forms and Input Elements</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Audio & Video -->
+    <audio controls>
+        <source src="audio/sample-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <video width="320" height="240" controls>
+        <source src="video/sample-video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wDchsz8nmbo?si=Fc8BoEVh-zj7eKzb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
+    <!-- Details & Summary -->
+
+    <details>
+        <summary>Click to see more details</summary>
+        <p>This is additional information that is hidden until the user clicks on the summary.</p>
+    </details>
+    <details>
+        <summary>Click to see more details 2</summary>
+        <p>This is additional information that is hidden until the user clicks on the summary.</p>
+    </details>
+
+    <!-- Progress & Meter -->
+    <label for="file">File upload progress:</label>
+    <progress id="file" value="50" max="100">50%</progress>
+    <br>
+    <label for="disk-usage">Disk usage:</label>
+    <meter id="disk-usage" value="0.7" min="0" max="1">70%</meter>
+
+    <!-- Figure & Figcaption -->
+    <figure>
+        <img src="../thumbnail-3.jpg" alt="Sample Image" width="300">
+        <figcaption>This is a sample image with a caption.</figcaption>
+    </figure>
+
+    <!-- Canvas : grphics, drawings or animations -->
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+        Your browser does not support the HTML5 canvas tag.
+    </canvas>
+
+    <!-- Template : Hidden HTML content that can be cloned using JS -->
+    <template id="my-template">
+        <style>
+            .highlight {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+        <div class="highlight">This is a highlighted message from the template!</div>
+    </template>
+
+    <!-- Time & Address -->
+
+    <p>Current time: <time datetime="2024-06-15T10:00:00Z">June 15, 2024, 10:00 AM UTC</time></p>
+
+    <address>
+        Contact us at:<br>
+        123 Main St.<br>
+        Anytown, USA<br>
+        Email: <a href="mailto:example@gmail.com">example@gmil.com</a><br>
+        Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+    </address>
+
+    <!-- Abbrevation -->
+    <p>The <abbr title="Hyper Text Markup Language">HTML</abbr> was founded in 1948.</p>
+
+</body>
+
+</html>
