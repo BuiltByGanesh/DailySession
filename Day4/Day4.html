@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4: The Ideal Stocking Stuffer</title>
+    <style>
+        td[scope="row"] {
+            background-color: lightyellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- Table -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Chocolate</td>
+                <td>5</td>
+                <td>$10.00</td>
+            </tr>
+            <tr>
+                <td>Toy Car</td>
+                <td>2</td>
+                <td>$15.00</td>
+            </tr>
+            <tr>
+                <td>Book</td>
+                <td>1</td>
+                <td>$20.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td>$45.00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- Rowspan & Colspan -->
+    <table border="1" style="margin-top:20px;">
+        <tr>
+            <th rowspan="2">Name</th>
+            <th colspan="2">Scores</th>
+        </tr>
+        <tr>
+            <th>Math</th>
+            <th>Science</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>90</td>
+            <td>85</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>80</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+    <!-- Caption -->
+    <table border="1" style="margin-top:20px;">
+        <caption>Monthly Expenses</caption>
+        <tr>
+            <th>Category</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>Rent</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>Groceries</td>
+            <td>$300</td>
+        </tr>
+        <tr>
+            <td>Utilities</td>
+            <td>$150</td>
+        </tr>   
+    </table>
+    
+    <!-- Border & Cell Spacing -->
+    <table border="2" cellspacing="5" cellpadding="10" style="margin-top:20px;">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Notebook</td>
+            <td>$5.00</td>
+        </tr>
+        <tr>
+            <td>Pen</td>
+            <td>$1.50</td>
+        </tr>
+    </table>
+
+    <!-- Colgroup & Col -->
+    <table border="1" style="margin-top:20px;">
+        <colgroup>
+            <col span="1" style="background-color:lightgray;">
+            <col span="1" style="background-color:lightblue;">
+        </colgroup>
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Apple</td>
+            <td>$1.00</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>$0.50</td>
+        </tr>
+    </table>
+
+    <!-- Accessibility Features -->
+    <table border="1" style="margin-top:20px;">
+        <caption>Employee Information</caption>
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">1</td>
+                <td>John Doe</td>
+                <td>HR</td>
+            </tr>
+            <tr>
+                <td scope="row">2</td>
+                <td>Jane Smith</td>
+                <td>IT</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">End of Employee List</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
