@@ -1,0 +1,75 @@
+/* Text & Font Properties */
+
+.text-properties{
+    color: rgb(0, 0, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 100;  /* 100, 200, 300, 400, 500, 600, 700, 800, 900, bold, bolder */
+    font-style: italic; /* normal, italic, oblique */
+    text-align: center; /* left, right, center, justify */
+    text-decoration: underline; /* none, underline, overline, line-through */
+    text-transform: uppercase; /* none, capitalize, uppercase, lowercase */
+    letter-spacing: 2px; /* space between letters */
+    word-spacing: 4px; /* space between words */
+    line-height: 28px; /* space between lines */
+}
+
+/* Color Properties */
+p{
+    color: red;
+    color: #000000; /* Hexadecimal - 00-FF(R), 00-FF(G), 00-FF(B) */
+    color: rgb(0, 0, 255); /* RGB - 0-255(R), 0-255(G), 0-255(B) */
+    color: rgba(0, 0, 255, 0.5); /* RGBA - 0-255(R), 0-255(G), 0-255(B), 0-1(A) */
+}
+
+/* Background Properties */
+.bg{
+    background-color: lightgrey; /* color name */
+    background-color: #D3D3D3; /* Hexadecimal */
+    background-color: rgb(211, 211, 211); /* RGB */
+    background-color: rgba(211, 211, 211, 0.5); /* RGBA */
+    background-image: url('thumbnail-3.jpg'); /* Image URL */
+    background-repeat: no-repeat; /* repeat, no-repeat, repeat-x, repeat-y */
+    background-size: cover; /* auto, cover, contain */
+    background-position: bottom; /* top, bottom, left, right, center */
+    background-attachment: fixed; /* scroll, fixed */
+}
+
+/* Box Model Properties */
+
+/* Content -> Padding -> Border -> Margin */
+.box-model{
+    width: 300px; /* width of the content area */
+    height: 200px; /* height of the content area */
+    padding: 20px; /* space between content and border */
+    border: 5px solid black; /* border width, style, color */
+    margin: 30px; /* space outside the border */
+    box-sizing: border-box; /* content-box, border-box */
+    /* Total width = width + padding + border + margin */
+    /* Total height = height + padding + border + margin */
+}
+
+/* Color & Border */
+
+.color-border{
+    border: 3px dashed blue; /* border width, style, color */
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 5px 5px 10px grey; /* horizontal offset, vertical offset, blur radius, color */
+    border-style: dashed;
+    border-color: red;
+}
+
+.btn{
+    background-color: #9929fb;
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
