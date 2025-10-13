@@ -1,0 +1,107 @@
+/* Display & Visiblity */
+/* div{
+    display: inline;
+    display: flex;
+    display: grid;
+    display: block;
+    display: none;
+
+
+    visibility: hidden;
+    visibility: collapse;
+    visibility: inherit;
+    visibility: initial;
+    visibility: visible;
+
+    overflow: hidden;
+    overflow: auto;
+    overflow: scroll;
+    overflow: visible;
+} */
+
+.unorder-list li{
+    display: block;
+}
+.inline p{
+    display: inline;
+}
+p{
+    visibility: visible;
+}
+tr.hidden-row{
+    visibility: collapse;
+}
+
+table td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip span{
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    border-radius: 5px;;
+    width: 100px;
+}
+
+.tooltip:hover span{
+    visibility: visible;
+}
+.box{
+    width: 200px;
+    height: 100px;
+    border: 2px solid black;
+    /* overflow: auto; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+} 
+
+/* Positioning Properties */
+
+.pos{
+    position: relative;
+    position: absolute;
+    position: static;
+    position: fixed;
+    position: sticky;  
+    
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    z-index: 99;
+
+    float: left;
+    float: right;
+
+}
+
+/* Border Radius & Shadow */
+
+.border{
+    margin-top: 30px;
+    width:300px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 10px 0px black;
+}
+
+h3{
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+}
+
