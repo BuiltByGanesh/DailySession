@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12</title>
+    
+    <style>
+        :root{
+            --grid-border-color: #28a745;
+            --primary-color: #007BFF;
+            --secondary-color: #6c757d;
+            --text-color: #333333;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 15px;
+        }
+
+        .grid-item {
+            background-color: #ffffff;
+            
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /*transition: transform 0.2s;*/
+            /* width: 250px;
+            max-width: 300px; */
+        }
+        .grid-item:hover{
+border-left: 2px solid #007BFF;
+border-right: none;
+border-bottom: none;
+border-top: none;
+        }
+
+        /* .grid-item:hover {
+            transform: scale(1.05);
+        } */
+
+        .grid-item a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .grid-item.active {
+            background-color: var(--primary-color);
+        }
+
+        .grid-item.active a {
+            color: #ffffff;
+        }
+        .new-card{
+            background-color: #ffffff;
+            border: 2px solid var(--grid-border-color);
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }        
+
+    </style>
+</head>
+
+<body>
+    <!-- Grid Cards -->
+    <div class="grid-container">
+        <div >
+            <div class="new-card">
+                <img src="../assets/logo.png" alt="Logo" width="60">
+                <h1>Header 1</h1>
+                <p>This is a sample paragraph for the header card.This is a sample paragraph for the header card.This is a sample paragraph for the header card.This is a sample paragraph for the header card.</p>
+            </div>
+        </div>
+        <div >
+            <div class="new-card">
+                <img src="../assets/logo.png" alt="Logo" width="60">
+                <h1>Header 1</h1>
+                <p>This is a sample paragraph for the header card.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="new-card">
+                <img src="../assets/logo.png" alt="Logo" width="60">
+                <h1>Header 1</h1>
+                <p>This is a sample paragraph for the header card.This is a sample paragraph for the header card.This is a sample paragraph for the header card.</p>
+            </div>
+        </div>
+        <div class="grid-item">
+            <div class="new-card">
+                <img src="../assets/logo.png" alt="Logo" width="60">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
