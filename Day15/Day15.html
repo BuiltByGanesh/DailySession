@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15</title>
+    <style>
+    /* Trasitions */
+    .transition {
+        transition: transform 2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .transition:hover {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        transform: scale(1.5);
+    }
+
+    .card{
+        width: 300px;
+        padding: 25px;
+        border-radius: 12px;
+        background: #f4f4f4;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: transform 0.5s cubic-bezier(.19,1,.22,1), box-shadow 0.5s ease;
+    }
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+    20% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounceOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }   
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+.icon{
+    animation-delay: 3s;
+    animation-duration: 0.6s;
+
+    animation-name: bounceIn;
+
+
+}
+.icon svg{
+    fill: #4CAF50;
+}
+.icon svg path{
+    stroke: #c50707;
+}
+
+</style>
+
+    <head>
+        <body>
+            <button class="transition">Submit</button>
+            <div class="card">
+                <h2>Card Title</h2>
+                <p>This is a sample card. Hover over me to see the effect!</p>
+            </div>
+            <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke-width="2"/>
+                    <path d="M8 12l2 2l4-4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </div>
+        </body>
+</html>
