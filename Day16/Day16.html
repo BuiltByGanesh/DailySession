@@ -76,7 +76,13 @@
             /* .box:hover {
                 transform: translate(50px, 20px) rotate(45deg) scale(-1.5);
             } */
-
+            
+            .crotate {
+                transition: transform 0.8s ease-in-out;
+            }
+            .crotate:hover {
+                transform: rotate(360deg);
+            }
 
             
 
@@ -85,5 +91,6 @@
     </head>
     <body>
         <div class="box">test</div>
+        <img class="crotate" src="qR4Pl.png" alt="Day16" width="200px">
     </body>
 </html>

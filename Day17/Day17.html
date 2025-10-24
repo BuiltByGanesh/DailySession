@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 17</title>
+
+    <style>
+        /* Animations */
+        @keyframes animation-name{
+            from {
+                /* initial state */
+                property: value;
+            }
+            to {
+                /* final state */
+                property:value;
+            }
+        }
+
+        @keyframes identifier {
+            0% {
+                /* state at 0% */
+                property: value;
+            }
+            50% {
+                /* state at 50% */
+                property: value;
+            }
+            100% {
+                /* state at 100% */
+                property: value;
+            }
+        }
+
+        .example {
+            animation: animation-name duration timing-function delay iteration-count direction fill-mode play-state;
+            animation-name: animation-name;
+            animation-duration: duration;
+            animation-timing-function: timing-function;
+            animation-delay: delay;
+            animation-iteration-count: iteration-count;
+            animation-direction: direction;
+            animation-fill-mode: fill-mode;
+            animation-play-state: play-state;
+            animation: identifier 3s ease-in-out infinite;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: relative;
+            animation: moveBox 3s ease-in infinite alternate;
+        }
+
+        @keyframes moveBox {
+            0% {
+                left: 0;
+                transform: scale(1);
+            }
+            50% {
+                left: 150px;
+                background-color: lightgreen;
+                transform: scale(1.5);
+            }
+            100% {
+                left: 300px;
+                background-color: coral;
+                transform: scale(1);
+            }
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 10px solid lightgray;
+            border-top: 10px solid steelblue;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+            margin-top: 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="spinner"></div>
+</body>
+
+</html>
