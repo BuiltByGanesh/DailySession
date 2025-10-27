@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18</title>
+    <style>
+        /* Create a 3 button with 3 different color and when mouse hover is happened, change the background color to button color with smooth transition. */
+
+        
+        body {
+            /* font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; */
+            
+        }
+        #colorPulseButton {
+            background-color: red;
+            color: white;
+        }
+        #colorPulseButton:hover {
+            animation: colorPulse 2s ease-in-out;
+        }
+        @keyframes colorPulse {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: blue;
+            }
+        }
+        #stopButton {
+            background-color: rgb(0, 255, 13);
+            color: balck;
+        }
+        #stopButton:hover {
+            animation: colorPulse 2s ease-in-out;
+            color: white;
+        }
+        @keyframes colorPulse {
+            from {
+                background-color: rgb(0, 255, 13);
+            }
+            to {
+                background-color: blue;
+            }
+        }
+        #resetButton {
+            background-color: rgb(0, 255, 242);
+            color: black;
+        }
+        #resetButton:hover {
+            animation: colorPulse 2s ease-in-out;
+            color: white;
+        }
+        @keyframes colorPulse {
+            from {
+                background-color: rgb(0, 255, 242);
+            }
+            to {
+                background-color: blue;
+            }
+        }
+
+        /* Media Queries : Syntax */
+        
+        @media (max-width: 425px) {
+            #resetButton{
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 426px) and (max-width: 768px) {
+            #resetButton{
+                background-color: rgb(0, 255, 21);
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            #resetButton{
+                background-color: rgb(255, 136, 0);
+            }
+        }
+        @media (min-width: 1025px) and (max-width: 1440px) {
+            p{
+                display: none;
+            }
+        }
+
+        /* max-width, min-width, and Orientation */
+
+        @media (max-width: 600px) and (orientation: landscape) {
+            #stopButton {
+                display: none;
+            }
+        }
+
+
+        /* Responsive Example */
+        .boxContainer {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .box {
+            width: 30%;
+            background-color: teal;
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;;
+        }
+
+        @media (max-width: 768px) {
+            .boxContainer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .box {
+                width: 80%;
+                margin-bottom: 15px;
+            }
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Color Pulse Button-->
+     <!-- <button id="colorPulseButton" style="padding: 10px 20px; font-size: 16px;">Color Pulse</button>
+     <button id="stopButton" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Stop</button>
+     <button id="resetButton" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Reset</button>
+    <p>
+        Resize the browser window to see the effect of media queries on the "Reset" button's background color and the visibility of the "Stop" button.
+    </p> -->
+
+    <div class="boxContainer">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+
+</body>
+
+</html>
