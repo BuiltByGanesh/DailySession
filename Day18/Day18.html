@@ -10,12 +10,12 @@
 
         
         body {
-            /* font-family: Arial, sans-serif;
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0; */
+            background-color: #f0f0f0;
             
         }
         #colorPulseButton {
@@ -24,6 +24,10 @@
         }
         #colorPulseButton:hover {
             animation: colorPulse 2s ease-in-out;
+        }
+        #colorPulseButton:active {
+            background-color: rgb(30, 255, 0);
+            color: white;
         }
         @keyframes colorPulse {
             from {
@@ -133,18 +137,18 @@
 
 <body>
     <!-- Color Pulse Button-->
-     <!-- <button id="colorPulseButton" style="padding: 10px 20px; font-size: 16px;">Color Pulse</button>
+     <button id="colorPulseButton" style="padding: 10px 20px; font-size: 16px;">Color Pulse</button>
      <button id="stopButton" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Stop</button>
      <button id="resetButton" style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Reset</button>
     <p>
         Resize the browser window to see the effect of media queries on the "Reset" button's background color and the visibility of the "Stop" button.
-    </p> -->
+    </p>
 
-    <div class="boxContainer">
+    <!-- <div class="boxContainer">
         <div class="box">Box 1</div>
         <div class="box">Box 2</div>
         <div class="box">Box 3</div>
-    </div>
+    </div> -->
 
 </body>
 
