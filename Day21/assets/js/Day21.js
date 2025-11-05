@@ -1,7 +1,11 @@
 // Variables
+
 let name = "Adventurer";
 const PI = 3.14159;
 var age = 25;
+
+let city; // Declaration
+
 
 // Data Types
 let text = "Hello, World!"; // String
@@ -9,14 +13,26 @@ let num = 10; // Number
 let isActive = true; // Boolean ture/ false
 let x; // Undefined
 let person = null; // Null
-let colors = ["red", "green", "blue"]; // Array
+let colors = ["red", "green", "blue", "Yellow"]; // Array
 let car = { 
     make: "Toyota", 
     model: "Corolla", 
     year: 2020 
 }; // Object
 
+name = "Hero"; // Reassignment
+
+document.getElementById("value").innerHTML = text;
+console.log(text); 
+
+
+
+colors = "yellow"; // Reassignment
+
+
+
 // Operators
+
 
 // Arithmetic Operators
 let sum = 5 + 3; // Addition
