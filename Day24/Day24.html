@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            // Condtion (Decision Making)
+
+            // if(condition){
+            //     // code to run if condition is ture
+            // }
+            // else{
+            //     // code to run if condition is false
+            // }
+
+            // Check if a user is an adult
+
+            let UserAge = 17;
+
+            if(UserAge >= 18){
+                console.log("The User is eligible");
+            }else{
+                console.log("The User is not eligible");
+            }
+
+            // else if
+
+            let temp = 32;
+
+            if(temp > 35){
+                console.log("It's too hot!");
+            } else if(temp >=25){
+                console.log("Nice and warm");
+            } else if(temp > 10){
+                console.log("It's cold!");
+            } else {
+                console.log("Its too cold!");
+            }
+
+            // Nested If
+
+            // if(condition){
+            //     if(condition){
+
+            //     }
+            // }
+
+            // Nested if else
+
+            // if(condition){
+            //     if(condition){
+
+            //     } else{
+
+            //     }
+            // }else{
+            //     if(condition){
+
+            //     } else{
+
+            //     }
+            // }
+
+            // Example
+
+            let num = 15;
+
+            if(num >=20){
+                if(num === 25){
+                    console.log("User fall's under 25 category");
+                }else{
+                    console.log("User fall's not under 25 category");
+                }
+            }else{
+                if(num === 15){
+                    console.log("User fall's under 15 category");
+                }else{
+                    console.log("User fall's under any category");
+                }
+            }
+
+
+            // Ternary Operator
+
+            // var result = (age>=18) ? "" : "";
+
+            UserAge = 16;
+
+            let result = (UserAge>=18) ? "Adult" : "Minor";
+
+            console.log(result);
+
+
+            // Switch Statment
+
+            let day = "Friday";
+
+            switch (day){
+                case "Monday": 
+                    console.log("Start Of the Week!");
+                    break;
+                case "Friday":
+                    console.log("Weekend is near!");
+                    break;
+                default:
+                    console.log("Just another day.");
+            }
+
+
+        </script>
+    </body>
+</html>
