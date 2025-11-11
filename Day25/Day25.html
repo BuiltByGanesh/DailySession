@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // Leap Year
+            // Year divisible by 4
+            // Year not divisible by 100
+            // Unless it is also divisible by 400
+
+            let year = 3400;
+
+            if(year % 4 === 0){
+                if(year % 100 === 0){
+                    if(year % 400 === 0){
+                        console.log(year+ " is a Leap Year" );
+                    }else{
+                        console.log(year+ " is Not a Leap Year");
+                    }
+                } else{
+                    console.log(year+ " is a Leap Year");
+                }
+            } else{
+                console.log(year+ " is Not a Leap Year");
+            }
+
+            // loops
+
+            // For Loop Syntax
+
+            // for(initalization; condition; Increment/Decrement){
+            //     // Code to be execute
+            // }
+
+            // For Loop Example
+
+            let n=10;
+
+            for(let i=1; i<=n; i++){
+                console.log("Count " + i);
+            }
+
+            console.log("--------------- While Loop --------------------");
+
+            // While Loop Syntax
+
+            // while (condition){
+            //     // code to de execute
+            // }
+
+            let j=1;
+            while(j<1){
+                console.log("Count "+ j);
+                j++;
+            }
+
+            let a=1;
+
+            k = a++;  // a=a+1
+
+
+            console.log(k);
+
+            console.log(a);
+
+            // j++ --->  j=j+1
+            // ++j  ----> j=j+1
+
+            // Do While Loop Syntax
+
+            let num = 1;
+
+            do{
+                console.log("Count "+ num);
+                num++;
+            } while (num <1);
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>
