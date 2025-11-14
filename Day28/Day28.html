@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <script>
+        // Function Expression
+        let multiply = function(a, b) {
+            return a * b;
+        };
+
+        console.log(multiply(4, 5)); // Output: 20
+
+        // Arrow Function with parameters and single line
+
+        const add = (a,b) => a+b;
+
+        console.log(add(10, 15)); // Output: 25
+
+        // Arrow Function with multiple lines & Parameters
+        const divide = (a, b) => {
+            if(b === 0){
+                return "Cannot divide by zero";
+            } else {
+                return a / b;
+            }
+        };
+        console.log(divide(20, 4)); // Output: 5
+
+        // Arrow Function without parameters
+
+        const printHello = () => {
+            return "Hello from Arrow Function";
+        }
+
+        // function printHello(){
+        //     return "Hello from Arrow Function";
+        // }
+
+        console.log(printHello()); // Output: Hello from Arrow Function
+
+
+
+        const dog = function(){
+            return "Woof Woof";
+        }   
+    
+        console.log(dog()); // Output: Woof Woof
+
+
+        // Arrays Methods
+
+        let numbers = [1, 2, 3, 4, 5];
+        numbers.push("testing"); // Adds 6 to the end
+        console.log(numbers); // Output: [1, 2, 3, 4, 5, 7]
+
+        numbers.pop(); // Removes the last element
+        console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
+        numbers.shift(); // Removes the first element
+        console.log(numbers); // Output: [2, 3, 4, 5]
+
+        numbers.unshift("number"); // Adds 10 to the beginning
+        console.log(numbers); // Output: [0, 2, 3, 4, 5]
+
+        numbers[3] = 20; // Updates index 2 to 20
+
+        // slice and splice
+
+        let fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let newfruits = fruits.slice(0, 4); // Extracts from index 1 to 2
+        console.log("New Fruits: "+ newfruits); // Output: ["Orange", "Apple"]
+
+        fruits.splice(1,1); // removes 1 element at index 1
+        console.log(fruits); // Output: ["Banana", "Apple", "Mango"]
+
+        fruits.splice(1, 0, "Grapes"); // adds "Grapes" at index 1
+        console.log(fruits); // Output: ["Banana", "Grapes", "Apple", "Mango"]
+
+
+        // map(), filter(), reduce()
+
+        // map() - Apply a operation on each element and returns a new array
+        let nums = [1, 2, 3, 4, 5];
+
+        let doubled = nums.map(function(num){
+            return num * 4;
+        });
+        console.log("Doubled: "+ doubled); // Output: [2, 4, 6, 8, 10]
+
+        // filter() - Select only matching elements based on condition
+
+        let numberList = [10, 15, 20, 25, 30];
+        let above20 = numberList.filter(n => n > 20);
+        console.log("Above 20: "+ above20); // Output: [25, 30]
+        
+        // reduce() - Reduce the array to a single value based on operation
+
+        let numArray = [10, 20, 30, 40, 50];
+        let sum = numArray.reduce((accumulator, current) => accumulator + current, 0);
+        console.log("Sum: "+ sum); // Output: 15
+
+        // sort() - Sorts the elements of an array
+        let unsorted = [5, 2, 2, 1, 4];
+        unsorted.sort((a, b) => a - b); // Ascending order
+        console.log("Sorted: "+ unsorted); // Output: [1, 2, 4, 5, 8]
+
+        let fruitsList = ["Banana", "Apple", "Mango", "Orange"];
+        fruitsList.sort(); // Alphabetical order
+        console.log("Sorted Fruits: "+ fruitsList); // Output: ["Apple", "Banana", "Mango", "Orange"]
+
+        //reverse() - Reverses the order of elements in an array
+        let arr = [1, 2, 3, 4, 5];
+        arr.reverse();
+        console.log("Reversed: "+ arr); // Output: [5, 4, 3, 2, 1]
+
+    </script>
+</body>
+</html>
