@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+
+    <script>
+        // Prime number using Arrays
+
+        let arr = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+        let prime = [];
+
+        function isPrime(arr){
+            for(let i=0; i<arr.length; i++){
+                let num = arr[i];
+                let count = 0;
+
+                //check divisors
+                for(let j=1; j<=num; j++){
+                    if(num % j == 0){
+                        count++;
+                    }
+                }
+
+                //if divisible only by 1 and iteself
+                if(count == 2){
+                    prime.push(num);
+                }
+            }
+        }
+
+        isPrime(arr);
+
+        console.log("Prime Numbers are: " + prime);
+
+        // Global and Local Scope
+
+        let globalVar = "I am a Global Variable";
+
+        function checkScope(){
+            let localVar = "I am a Local Variable";
+            console.log(globalVar); // Accessible
+            console.log(localVar);  // Accessible
+        }
+        // console.log(localVar); // Not Accessible, will throw error
+        checkScope();
+
+        // Function Scope
+
+        function funcScope(){
+            let funcVar = "I am Function Scoped Variable";
+            console.log(funcVar); // Accessible
+        }
+
+        funcScope();
+        //  console.log(funcVar);
+        
+        // Block Scope
+
+        {
+            let blockVar = "I am Block Scoped Variable";
+            console.log(blockVar); // Accessible
+        }   
+
+        // console.log(blockVar); // Not Accessible, will throw error
+
+        // var scope
+        {
+            var varScopeVar = "I am var Scoped Variable1";
+            console.log(varScopeVar); // Accessible
+        }
+
+        console.log(varScopeVar); // Accessible due to var being function scoped
+
+
+        // Global Scope - Keyword 'var', 'let' and 'const' - Anywhere in the code
+        // Function Scope - Keyword 'var', 'let' and 'const' - Inside a function
+        // Block Scope - Keyword 'let' and 'const' - Inside a block {}
+        // var (special) - Keyword 'var' - Inside a block {} but accessible outside the block
+        // 'var' is function scoped, not block scoped
+
+
+        // Basic Array Methods
+
+        let colors = ["Red", "Green", "Blue"];
+        console.log(colors); // Output: ["Red", "Green", "Blue"]
+        console.log(colors.length); // Output: 3
+        let myList = colors.toString();
+        console.log(myList); // Output: Red,Green,Blue
+
+        // String to Array
+        let array = myList.split(",");
+        console.log(array); // Output: ["Red", "Green", "Blue"]
+
+        // Join Array
+        let fruits = ["Banana", "Orange", "Apple"];
+        console.log(fruits.join(",")); // Output: Banana - Orange - Apple
+
+        // Cancat Arrays
+        let array1 = ["A", "B", "C"];
+        let array2 = [1, 2, 3];
+        let combinedArray = array1.concat(array2);
+        console.log(combinedArray); // Output: ["A", "B", "C", 1, 2, 3]
+
+        // Slice Array into parts
+        let letters = ["A", "B", "C", "D", "E"];
+        let partArray = letters.slice(1, 5); // Extracts from index 1 to 3
+        console.log(partArray); // Output: ["B", "C", "D"] 
+        
+        // flat Array
+        let nestedArray = [1, 2, [3, 4], [5, 6]];
+        let flatArray = nestedArray.flat();
+        console.log(flatArray); // Output: [1, 2, 3, 4, 5, 6]
+
+        console.log(nestedArray[3][0]);
+
+
+
+        
+    </script>
+</body>
+</html>
