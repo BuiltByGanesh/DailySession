@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 30</title>
+</head>
+<body>
+    <h1>Welcome to Day 30</h1>
+    <h3>This is an element with ID</h3>
+
+    <div>
+        <h1 id="ids">This is an element with ID</h1>
+        <h1 class="classes">This is an element with Class</h1>
+        <ul>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+        </ul>
+    </div>
+    <input id="name" type="number" placeholder="Name">
+    <button onclick="changeText()">Click Me</button>
+    <div id="Output"></div>
+    <script>
+        // DOM Manipulation - Document Object Model
+
+        // Selecting elements
+        
+        // querySelector
+
+        const header = document.querySelector('h1');
+        const ids = document.querySelector('#ids');
+        const classes = document.querySelector('.classes');
+
+        // querySelectorAll
+
+        let listItems = document.querySelectorAll('h1');
+
+        // other selection menthods
+
+        const getById = document.getElementById('ids');
+        const getByClassName = document.getElementsByClassName('classes');
+        const getByTagName = document.getElementsByTagName('li');
+
+        // Examples
+        function changeText() {
+        header.textContent = "DOM Manipulation Example";
+        //getByTagName[2].style.color = "#3498db";
+
+        let nameInput = document.getElementById('name').value;
+        document.getElementById("Output").innerHTML = "<h2>Hello, " + nameInput + "!</h2";
+        }
+
+        getByClassName[0].innerText = "This text is changed using getElementsByClassName";
+
+
+        // String --> Number
+
+        let str = "123";
+        let num = Number(str);
+        console.log(typeof num);
+        let floatum = "12.34";
+        let num2 = parseFloat(floatum);
+        let intum = "56.78";
+        let num3 = parseInt(intum);
+        console.log(num2);
+
+        // Number --> String
+
+        let val = 456;
+        let strVal = val.toString();
+        console.log(typeof strVal);
+
+        // Number --> Boolean
+        let n = 1;
+        let boolVal = Boolean(n);
+        console.log(boolVal);
+
+        // Boolean --> Number
+        let b = true;
+        let numVal = Number(b);
+        console.log(numVal);
+
+        // Boolean --> String
+        let bool = false;
+        let strBool = String(bool);
+        console.log(strBool);
+
+        10 + "5"; // "105"
+        10 + true; // 11
+        "5" - 2; // 3
+        
+
+    </script>
+
+</body>
+</html>
