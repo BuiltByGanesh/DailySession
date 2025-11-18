@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <ul id="my-list">
+            <li>Item 1</li>
+        </ul>
+
+        <div id="remove-me">This element will be removed.</div>
+
+        <button id="alert-button">Click Me</button>
+
+
+        <input type="text" id="name" placeholder="Type something and press Enter">
+        <p id="output"></p>
+        
+        <div id="box" style="width: 100px; height: 100px; background: red;"></div>
+
+        <form id="my-form" method="post">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <script>
+            // DOM Manipulation
+
+            // Create a new div element
+            const newDiv = document.createElement('div');
+
+            function addListItem(itemText) {
+                // Create a new list item
+                const newItem = document.createElement('li');
+                newItem.textContent = itemText;
+
+                // Append the new list item to the existing ul
+                const ul = document.querySelector('ul');
+                ul.appendChild(newItem);
+            }
+
+            // Call the function to add the list item
+            addListItem("Item 2");
+            addListItem("Item 3");
+
+            // Remove the Element
+            function removeElementById(elementId) {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.remove();
+                }
+            }
+            
+            // Call the function to remove the element
+            removeElementById("my-list");
+
+            // Event Listening
+
+            const alertButton = document.getElementById('alert-button');
+            alertButton.addEventListener('click', function() {
+                alert('Button was clicked!');
+            });
+
+
+            // Input as Event Listener
+
+            const nameInput = document.getElementById('name');
+            const outputParagraph = document.getElementById('output');
+
+            nameInput.addEventListener('input', function() {
+                    outputParagraph.textContent = 'You typed: ' + nameInput.value;
+            });
+
+            // Mouse Hover Event Listener
+
+            const box = document.getElementById('box');
+            box.addEventListener('mouseover', function() {
+                box.style.backgroundColor = 'blue';
+            });
+
+            // Submit Event Listener
+            const myForm = document.getElementById('my-form');
+            myForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Stop page refresh
+                const emailInput = document.getElementById('email');
+                alert('Form submitted with email: ' + emailInput.value);
+            });
+
+
+            // Dilog Boxes
+
+            alert('This is an alert dialog box!');
+            const result = confirm('Do you want to proceed?');
+            const userInput = prompt('Please enter your name:');
+            console.log('User entered: ' + userInput);
+            console.log('User confirmed: ' + result);
+
+
+        </script>
+    </body>
+</html>
