@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day 32</title>
+        </head>
+        <body>
+            <input type="text" id="taskInput" placeholder="Enter a new task">
+            <button id="addTaskBtn">Add Task</button>
+            <ul id="taskList"></ul>
+
+            <input type="text" id="anotherInput" placeholder="Another input field">
+            <button id="anotherBtn"><img src="hide-svgrepo-com.svg" width="20px"></button>
+
+            <script>
+                // Simple To Do list Application
+                document.getElementById('addTaskBtn').addEventListener('click', function() {
+                    const taskInput = document.getElementById('taskInput');
+                    const taskList = document.getElementById('taskList');
+
+                    if (taskInput.value.trim() !== '') {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = taskInput.value;
+                        
+                        const deleteBtn = document.createElement('button');
+                        deleteBtn.textContent = 'Delete';
+                        deleteBtn.addEventListener('click', function() {
+                            taskList.removeChild(listItem);
+                        });
+
+                        listItem.appendChild(deleteBtn);
+                        taskList.appendChild(listItem);
+                        
+
+                        taskInput.value = '';
+                    }
+                    
+                    
+                });
+            </script>
+        </body>
+</html>
