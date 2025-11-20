@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <h2>Random Password Generator</h2>
+        <button id="generate-btn">Generate Password</button>
+        <p id="password-display"></p>
+
+        <h2>Counter App</h2>
+        <h1 id="counter-value">0</h1>
+
+        <button id="increment-btn">Increment</button>
+        <button id="decrement-btn">Decrement</button>
+        <button id="reset-btn">Reset</button>
+
+        <script>
+            // Random password generater
+            document.getElementById('generate-btn').addEventListener('click', function() {
+                const length = 10;
+                const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=";
+                let password = "";
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * charset.length);
+                    console.log(randomIndex);
+                    password += charset[randomIndex];
+                }
+                document.getElementById('password-display').innerText = password;
+            });
+
+
+            // Counter App
+            let counter = 0;
+
+            // Increment button
+            document.getElementById('increment-btn').addEventListener('click', function() {
+                counter++;
+                updateCounterDisplay();
+            });
+
+            // Decrement button
+            document.getElementById('decrement-btn').addEventListener('click', function() {
+                if (counter > 0){
+                counter--;
+                }
+                updateCounterDisplay();
+            });
+
+            // Reset button
+            document.getElementById('reset-btn').addEventListener('click', function() {
+                counter = 0;
+                updateCounterDisplay();
+            });
+
+            function updateCounterDisplay() {
+                document.getElementById('counter-value').innerText = counter;
+            }
+
+            
+
+        </script>
+    </body>
+</html>
