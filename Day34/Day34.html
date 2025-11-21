@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 34</title>
+    <style>
+        body{
+            transition: background-color 3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="list"></ul>
+
+    <button onclick="color1()">button</button>
+    <button id="btn2">Add to Cart</button>
+    <img src="https://www.example.com/image.jpg" alt="Example Image" width="200">
+    <script>
+        // For Loop Example
+
+        let numbers = [10, 20, 30, 40, 50];
+        let colors = ['red', 'green', 'blue', 'yellow'];
+        for(num of numbers) {
+            console.log(num);
+        }
+
+        // ForEach Loop Example
+
+        // array.forEach(function(element, index, array) {
+        //     console.log(element);
+        // });
+        // Array of numbers
+        numbers.forEach(function(num) {
+            console.log(num);
+        });
+
+        // Index parameter
+
+        colors.forEach(function(color, index) {
+            console.log(index + ": " + color);
+        });
+
+        colors.forEach(color => console.log(color));
+
+
+        // Element Parameter
+        let item = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+        let ul = document.getElementById('list');
+        item.forEach(function(itm) {
+            let li = document.createElement('li');
+            li.textContent = itm;
+            ul.appendChild(li);
+        });
+
+        function color1() {
+            let bodyColor = document.body;
+            bodyColor.style.backgroundColor = 'lightblue';
+            let btn2 = document.getElementById('btn2');
+            btn2.style.backgroundColor = 'orange';
+
+
+
+        }
+
+
+    </script>
+</body>
+</html>
