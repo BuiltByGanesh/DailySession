@@ -21,7 +21,7 @@
                 document.getElementById("qrcode").innerHTML = "";
                 const fileInput = document.getElementById("file");
                 const files = fileInput.files[0];
-                new QRCode(document.getElementById("qrcode"), {
+                new  (document.getElementById("qrcode"), {
                     text: URL.createObjectURL(files),
                     width: 256,
                     height: 256,

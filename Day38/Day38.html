@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 38</title>
+</head>
+
+<body>
+    <script>
+        // Closure Example
+
+        function outer() {
+            let count = 0; // Private variable
+
+            function inner() {
+                count++;
+                console.log("Count:", count);
+            }
+            return inner;
+        }
+
+
+        const counter = outer();
+        counter(); // Count: 1
+
+        // Timw interval Example
+
+        let seconds = 0;
+        const intervalId = setInterval(() => {
+            seconds++;
+            console.log(`Seconds elapsed: ${seconds}`);
+            if (seconds >= 5) {
+                clearInterval(intervalId);
+                console.log("Timer stopped after 5 seconds.");
+            }
+        }, 1000);
+
+        // Set Timeout Example
+        console.log("Timer started for 3 seconds...");
+        setTimeout(() => {
+            console.log("3 seconds have passed!");
+        }, 3000);
+
+        // setInterval(() => {
+
+        //     console.log("This message appears every 2 seconds.");
+        // }, 2000);
+
+        // setInterval( functionality, 2000);
+
+        // Storage Example
+
+        localStorage.setItem("username", "JohnDoe");
+        const username = localStorage.getItem("username");  
+        console.log("Stored username:", username);
+
+    </script>
+
+</body>
+
+</html>
